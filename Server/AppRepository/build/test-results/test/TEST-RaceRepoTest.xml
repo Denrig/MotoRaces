@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RaceRepoTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-04-28T08:21:12" hostname="DESKTOP-0LSM36U" time="1.473">
+  <properties/>
+  <testcase name="loginTest" classname="RaceRepoTest" time="1.204"/>
+  <testcase name="testRacer" classname="RaceRepoTest" time="0.143"/>
+  <testcase name="test" classname="RaceRepoTest" time="0.125"/>
+  <system-out><![CDATA[28 Apr 2020 11:21:12,672 INFO  org.springframework.context.support.AbstractApplicationContext 589 prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@697cd403: startup date [Tue Apr 28 11:21:12 EEST 2020]; root of context hierarchy
+28 Apr 2020 11:21:12,718 INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader 316 loadBeanDefinitions - Loading XML bean definitions from class path resource [Test.xml]
+28 Apr 2020 11:21:13,305 INFO  app.Repository.JDBCutils 23 getNewConnection - trying to connect to database ... jdbc:postgresql://localhost:8888/MPP
+28 Apr 2020 11:21:13,306 INFO  app.Repository.JDBCutils 24 getNewConnection - user: Admin
+28 Apr 2020 11:21:13,306 INFO  app.Repository.JDBCutils 25 getNewConnection - pass: admin
+96724
+28 Apr 2020 11:21:13,390 INFO  org.springframework.context.support.AbstractApplicationContext 589 prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@13113e6e: startup date [Tue Apr 28 11:21:13 EEST 2020]; root of context hierarchy
+28 Apr 2020 11:21:13,391 INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader 316 loadBeanDefinitions - Loading XML bean definitions from class path resource [Test.xml]
+28 Apr 2020 11:21:13,479 INFO  app.Repository.JDBCutils 23 getNewConnection - trying to connect to database ... jdbc:postgresql://localhost:8888/MPP
+28 Apr 2020 11:21:13,479 INFO  app.Repository.JDBCutils 24 getNewConnection - user: Admin
+28 Apr 2020 11:21:13,480 INFO  app.Repository.JDBCutils 25 getNewConnection - pass: admin
+28 Apr 2020 11:21:13,534 INFO  org.springframework.context.support.AbstractApplicationContext 589 prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@77e085be: startup date [Tue Apr 28 11:21:13 EEST 2020]; root of context hierarchy
+28 Apr 2020 11:21:13,535 INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader 316 loadBeanDefinitions - Loading XML bean definitions from class path resource [Test.xml]
+28 Apr 2020 11:21:13,603 INFO  app.Repository.JDBCutils 23 getNewConnection - trying to connect to database ... jdbc:postgresql://localhost:8888/MPP
+28 Apr 2020 11:21:13,604 INFO  app.Repository.JDBCutils 24 getNewConnection - user: Admin
+28 Apr 2020 11:21:13,604 INFO  app.Repository.JDBCutils 25 getNewConnection - pass: admin
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

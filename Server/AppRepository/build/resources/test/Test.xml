@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:utils="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+<utils:properties id="jdbcProps" location="connUtils.properties"/>
+    <bean id="raceValidator" class="app.Validators.RaceValidator"/>
+    <bean id="racerValidator" class="app.Validators.RacerValidator"/>
+    <bean id="raceRepo" class="app.Repository.RaceDBRepository">
+        <constructor-arg ref="raceValidator"/>
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+    <bean id="userRepo" class="app.Repository.UserRepository">
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+    <bean id="racerRepo" class="app.Repository.RacerDBRepository">
+        <constructor-arg ref="racerValidator"/>
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+    <Appenders>
+        <File name="log" fileName="log/DataBase.log" append="true">
+            <PatternLayout pattern="%d{DATE} %-5level %class{36} %L %M - %msg%n"/>
+        </File>c
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="log"/>
+        </Root>
+    </Loggers>
+</Configuration>

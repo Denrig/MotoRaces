@@ -1,0 +1,70 @@
+syntax="proto3";
+option java_multiple_files=true;
+option java_package="app.Network.gRPC";
+option java_outer_classname="gRPC";
+option csharp_namespace="app.Networking.gRPC";
+
+import "google/protobuf/empty.proto";
+
+message Response{
+  enum Type{ok=0;add=1;delete=2;}
+  Type type=1;
+  Racer racer=3;
+  Race race=4;
+}
+
+message Request{
+   enum Type{init=0;add=1;delete=2;}
+   Type type=3;
+   Racer racer=5;
+   Race race=4;
+   string user=6;
+}
+
+message LogRequest{
+  enum Type{in=0;out=2;}
+  Type type=3;
+  string user=1;
+  string pass=2;
+}
+
+//Basic Functions
+
+message GetRaces{}
+
+message GetRacers{}
+
+
+//Domain
+
+enum Engine{m75cm=0;m125cm=1;m250cm=2;}
+enum Team {RedBull=0;Toyota=1;Malboro=2;Pepsi=3;}
+
+message Racer{
+  int64 id=1;
+  string name=2;
+  Team team=3;
+  Engine engine=4;
+}
+
+message Race{
+  int64 id=1;
+  Engine engine=2;
+  string Date=3;
+  uint32 noRacers=4;
+}
+
+service IService{
+
+  rpc login(LogRequest)  returns (Response);
+  rpc logout(LogRequest)  returns (Response);
+  rpc getAvailableRaces(GetRaces) returns (stream Race);
+  rpc findAllRacers(GetRacers) returns (stream Racer);
+
+  rpc makeCall(stream Request) returns (stream Response);
+
+
+
+};
+
+

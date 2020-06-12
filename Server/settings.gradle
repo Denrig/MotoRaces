@@ -1,0 +1,5 @@
+rootProject.name = 'MotoRaces'
+include 'AppDomain'
+include 'AppRepository'
+include 'AppNetwork'
+include 'AppServer'
